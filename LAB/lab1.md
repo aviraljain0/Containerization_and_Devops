@@ -39,14 +39,14 @@ The primary goals of this experiment are:
 Using Vagrant, an Ubuntu VM was initialized and started.
 * **Command:** `vagrant init ubuntu/jammy64` followed by `vagrant up`.
 
-![Vagrant Up Process](../Screenshots/Lab1_s/Picture4.png)
+![Vagrant Up Process](../Screenshots/Lab1_s/lab1.1.png)
 > **Observation:** The system downloads the base box (Ubuntu Jammy) and configures the VirtualBox provider. Port forwarding (2222 -> 22) is established.
 
 ### **Step 2: Accessing the VM (SSH)**
 Once the VM was up, we established a connection to the guest OS.
 * **Command:** `vagrant ssh`
 
-![VM SSH Connection](../Screenshots/Lab1_s/Picture5.png)
+![VM SSH Connection](../Screenshots/Lab1_s/lab1.2.png)
 > **Observation:** Successful login to the Ubuntu 22.04.5 LTS environment.
 
 ### **Step 3: Installing Nginx**
@@ -54,7 +54,7 @@ Inside the VM terminal, the package lists were updated, and the Nginx web server
 * **Commands:** `sudo apt update`, `sudo apt install -y nginx`
 
 
-![Nginx Installation in VM](../Screenshots/Lab1_s/Picture8.png)
+![Nginx Installation in VM](../Screenshots/Lab1_s/lab1.3.png)
 > **Observation:** The `apt` package manager retrieves necessary archives. This process is slower than Docker as it installs dependencies for a full OS environment.
 
 ![Nginx Installation Complete](../Screenshots/Lab1_s/Picture9.png)

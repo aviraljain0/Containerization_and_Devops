@@ -39,7 +39,7 @@ The primary goals of this experiment are:
 Using Vagrant, an Ubuntu VM was initialized and started.
 * **Command:** `vagrant init ubuntu/jammy64` followed by `vagrant up`.
 
-![Vagrant Up Process](../Screenshots/Lab1_s/lab1.1.png)
+![Vagrant Up Process](../Screeshots/Lab1_s/lab1.1.png)
 > **Observation:** The system downloads the base box (Ubuntu Jammy) and configures the VirtualBox provider. Port forwarding (2222 -> 22) is established.
 
 ### **Step 2: Accessing the VM (SSH)**

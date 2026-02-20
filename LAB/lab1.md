@@ -46,7 +46,7 @@ Using Vagrant, an Ubuntu VM was initialized and started.
 Once the VM was up, we established a connection to the guest OS.
 * **Command:** `vagrant ssh`
 
-![VM SSH Connection](../Screenshots/Lab1_s/lab1.2.png)
+![VM SSH Connection](../Screeshots/Lab1_s/lab1.2.png)
 > **Observation:** Successful login to the Ubuntu 22.04.5 LTS environment.
 
 ### **Step 3: Installing Nginx**
@@ -54,18 +54,18 @@ Inside the VM terminal, the package lists were updated, and the Nginx web server
 * **Commands:** `sudo apt update`, `sudo apt install -y nginx`
 
 
-![Nginx Installation in VM](../Screenshots/Lab1_s/lab1.3.png)
+![Nginx Installation in VM](../Screeshots/Lab1_s/lab1.3.png)
 > **Observation:** The `apt` package manager retrieves necessary archives. This process is slower than Docker as it installs dependencies for a full OS environment.
 
-![Nginx Installation Complete](../Screenshots/Lab1_s/Picture9.png)
+![Nginx Installation Complete](../Screeshots/Lab1_s/lab1.4.png)
 > **Observation:** Installation is complete. Triggers for `man-db` and `ufw` are processed.
 
 ### **Step 4: Verification Inside VM**
 We verified the server was running locally within the guest OS.
 * **Command:** `curl localhost`
 
-![VM Internal Verification](../Screenshots/Lab1_s/Picture10.png)
-![VM Internal Verification](../Screenshots/Lab1_s/Picture11.png)
+![VM Internal Verification](../Screeshots/Lab1_s/lab1.5.png)
+![VM Internal Verification](../Screeshots/Lab1_s/lab1.6.png)
 > **Observation:** The `curl` command inside the VM returns the full HTML source of the "Welcome to nginx!" page.
 
 ---
@@ -76,14 +76,14 @@ We verified the server was running locally within the guest OS.
 The Docker engine was used to pull the Ubuntu image and deploy a containerized Nginx instance.
 * **Command:** `docker run -dp 8080:80 --name nginx-container nginx`
 
-![Docker Pull and Run](../Screenshots/Lab1_s/Screenshot2026-01-28024924.png)
+![Docker Pull and Run](../Screeshots/Lab1_s/lab1.7.png)
 > **Observation:** Docker pulls the image layers and starts the container nearly instantaneously.
 
 ### **Step 2: Verification**
 The Nginx server was verified by accessing the mapped port on the localhost.
 * **Command:** `curl localhost:8080`
 
-![Nginx Container Verification](../Screenshots/Lab1_s/Screenshot2026-01-28025154.png)
+![Nginx Container Verification](../Screeshots/Lab1_s/lab1.8.png)
 > **Observation:** The `curl` command confirms the Nginx "Welcome" page is active on port 8080.
 
 ---
@@ -96,7 +96,7 @@ This section uses specific metrics captured during the experiment to contrast th
 * **Metric:** Time taken to reach a usable state.
 * **VM Command:** `systemd-analyze`
 
-![VM Boot Time Analysis](../Screenshots/Lab1_s/docker.png)
+![VM Boot Time Analysis](../Screeshots/Lab1_s/lab1.9.png)
 > **Observation (VM):** The VM took **36.819 seconds** to finish startup (6.9s kernel + 29.8s userspace).
 > **Observation (Container):** The container started in **less than 1 second** (refer to Docker output in Sec 5).
 
@@ -104,16 +104,16 @@ This section uses specific metrics captured during the experiment to contrast th
 * **Metric:** Number of background processes required to run the application.
 * **VM Command:** `htop`
 
-![VM Htop Process List](../Screenshots/Lab1_s/Screenshot2026-01-28030004.png)
+![VM Htop Process List](../Screeshots/Lab1_s/lab1.10.png)
 > **Observation (VM):** `htop` reveals a heavy process tree. Even though we only want Nginx, the VM is running `systemd`, `snapd`, `rsyslogd`, `polkitd`, and `sshd`. There are dozens of tasks running to support the OS.
 
-![Docker Stats](../Screenshots/Lab1_s/docker_naginx_stats.png)
+![Docker Stats](../Screeshots/Lab1_s/lab1.11.png)
 > **Observation (Container):** `docker stats` shows the container uses minimal resources because it *only* runs the application process (Nginx) and its direct dependencies.
 
 ### **C. Memory Usage**
 * **Metric:** RAM consumption.
 
-![VM Memory Usage](../Screenshots/Lab1_s/Screenshot2026-01-28025836.png)
+![VM Memory Usage](../Screeshots/Lab1_s/lab1.12.png)
 > **Observation (VM):** The `free -h` command inside the VM shows it has allocated **957Mi** total, with **196Mi** used immediately by the OS kernel and services.
 
 > **Observation (Container):** Referring to the Docker Stats image above, the container consumes only **13.22MiB** of RAM.

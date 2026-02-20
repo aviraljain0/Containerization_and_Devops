@@ -15,7 +15,7 @@
 
 ## 🧪 LAB Experiments
 
-- [Experiment 1](LAB/lab1.md)
+- [Experiment 1](LAB/lab1.html)
 
 ---
 

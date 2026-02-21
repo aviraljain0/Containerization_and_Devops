@@ -51,8 +51,6 @@ To manage the lifecycle, the container is stopped first and then removed using i
 **Stop Screenshot:**
 ![Docker Stop](../Screeshots/Lab2_s/lab2.4.png)
 
-**Remove Screenshot:**
-![Docker Remove Container](../Screeshots/Lab2_s/lab2.5.png)
 
 ---
 
@@ -61,7 +59,7 @@ The final step in the lifecycle management is removing the image from the local 
 * **Command:** `docker rmi nginx`
 
 **Execution Screenshot:**
-![Docker Remove Image](../Screeshots/Lab2_s/lab2.6.png)
+![Docker Remove Image](../Screeshots/Lab2_s/lab2.5.png)
 
 ---
 

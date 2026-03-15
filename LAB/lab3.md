@@ -26,7 +26,7 @@ We ran the container in detached mode (`-d`) naming it `nginx-official` and mapp
 ### Step 3: Verify
 We verified the deployment by accessing the localhost URL. The response confirms the NGINX welcome page is active.
 
-![Verifying NGINX Response](../Screeshots/lab3_s/lab3.3.png)
+![Verifying NGINX Response](../Screeshots/lab3_s/la3.3.png)
 *Command:* `curl http://localhost:8080`
 
 ### Key Observations

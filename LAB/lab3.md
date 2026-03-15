@@ -14,25 +14,25 @@ The official NGINX image is pre-optimized, uses a Debian-based OS internally, an
 ### Step 1: Pull the Image
 We retrieved the latest official NGINX image from the Docker registry.
 
-![Pulling Official NGINX Image](../Screenshots/lab3_s/lab3.1.png)
+![Pulling Official NGINX Image](../Screeshots/lab3_s/lab3.1.png)
 *Command:* `docker pull nginx:latest`
 
 ### Step 2: Run the Container
 We ran the container in detached mode (`-d`) naming it `nginx-official` and mapped port 8080 on the host to port 80 in the container.
 
-![Running Official NGINX Container](../Screenshots/lab3_s/lab3.2.png)
+![Running Official NGINX Container](../Screeshots/lab3_s/lab3.2.png)
 *Command:* `docker run -d --name nginx-official -p 8080:80 nginx`
 
 ### Step 3: Verify
 We verified the deployment by accessing the localhost URL. The response confirms the NGINX welcome page is active.
 
-![Verifying NGINX Response](../Screenshots/lab3_s/lab3.3.png)
+![Verifying NGINX Response](../Screeshots/lab3_s/lab3.3.png)
 *Command:* `curl http://localhost:8080`
 
 ### Key Observations
 We checked the size of the downloaded official image.
 
-![Official NGINX Image Size](../Screenshots/lab3_s/lab3.4.png)
+![Official NGINX Image Size](../Screeshots/lab3_s/lab3.4.png)
 *Observation:* The official image size is approximately 161MB.
 
 ---
@@ -44,19 +44,19 @@ In this section, we built a custom image using `ubuntu:22.04` as the base. This 
 ### Step 1: Build the Image
 We created a `Dockerfile` that installs NGINX on top of Ubuntu and built the image with the tag `nginx-ubuntu`.
 
-![Building Ubuntu-based NGINX Image](../Screenshots/lab3_s/lab3.5.png)
+![Building Ubuntu-based NGINX Image](../Screeshots/lab3_s/lab3.5.png)
 *Command:* `docker build -t nginx-ubuntu .`
 
 ### Step 2: Run the Container
 We ran the Ubuntu-based container on port 8081.
 
-![Running Ubuntu Container](../Screenshots/lab3_s/lab3.6.png)
+![Running Ubuntu Container](../Screeshots/lab3_s/lab3.6.png)
 *Command:* `docker run -d --name nginx-ubuntu -p 8081:80 nginx-ubuntu`
 
 ### Observations
 The resulting image is significantly larger due to the inclusion of full OS utilities.
 
-![Ubuntu-based NGINX Image Size](../Screenshots/lab3_s/lab3.7.png)
+![Ubuntu-based NGINX Image Size](../Screeshots/lab3_s/lab3.7.png)
 *Observation:* The image size is approximately 134MB.
 
 ---
@@ -68,19 +68,19 @@ We built a custom image using `alpine:latest`. Alpine Linux is a security-orient
 ### Step 1: Build Image
 We built the image tagged `nginx-alpine`.
 
-![Building Alpine-based NGINX Image](../Screenshots/lab3_s/lab3.8.png)
+![Building Alpine-based NGINX Image](../Screeshots/lab3_s/lab3.8.png)
 *Command:* `docker build -t nginx-alpine .`
 
 ### Step 2: Run the Container
 We ran the Alpine-based container mapping port 8082 to port 80.
 
-![Running Alpine NGINX Container](../Screenshots/lab3_s/lab3.9.png)
+![Running Alpine NGINX Container](../Screeshots/lab3_s/lab3.9.png)
 *Command:* `docker run -d --name nginx-alpine -p 8082:80 nginx-alpine`
 
 ### Observations
 The Alpine-based image is extremely small compared to the others.
 
-![Alpine-based NGINX Image Size](../Screenshots/lab3_s/lab3.10.png)
+![Alpine-based NGINX Image Size](../Screeshots/lab3_s/lab3.10.png)
 *Observation:* The image size is approximately 10.4MB.
 
 ---
@@ -90,7 +90,7 @@ The Alpine-based image is extremely small compared to the others.
 ### Compare Sizes
 We compared all three images side-by-side to visualize the size differences.
 
-![Image Size Comparison](../Screenshots/lab3_s/lab3.11.png)
+![Image Size Comparison](../Screeshots/lab3_s/lab3.11.png)
 
 ### Inspect Layers
 We inspected the layer history of all three images.
@@ -98,7 +98,7 @@ We inspected the layer history of all three images.
 * **Alpine** has minimal layers, contributing to its small size.
 * **Official NGINX** is optimized but heavier than Alpine.
 
-![Docker History Comparison](../Screenshots/lab3_s/lab3.12.png)
+![Docker History Comparison](../Screeshots/lab3_s/lab3.12.png)
 *Command:* `docker history nginx`, `docker history nginx-ubuntu`, `docker history nginx-alpine`.
 
 ---
@@ -108,7 +108,7 @@ We inspected the layer history of all three images.
 ### Step 1: Create Custom HTML
 We created a directory named `html` and added a custom `index.html` file.
 
-![Creating Custom HTML](../Screenshots/lab3_s/lab3.13.png)
+![Creating Custom HTML](../Screeshots/lab3_s/lab3.13.png)
 *Commands:*
 * `mkdir html`
 * `echo "<h1>Hello from Docker NGINX</h1>" > html/index.html`
@@ -116,7 +116,7 @@ We created a directory named `html` and added a custom `index.html` file.
 ### Step 2: Run with Volume Mount
 We ran a new container, mounting the local `html` directory to `/usr/share/nginx/html` inside the container. This allows NGINX to serve our custom file.
 
-![Running NGINX with Volume Mount](../Screenshots/lab3_s/lab3.14.png)
+![Running NGINX with Volume Mount](../Screeshots/lab3_s/lab3.14.png)
 *Command:* `docker run -d -p 8083:80 -v $(pwd)/html:/usr/share/nginx/html nginx`
 
 ---

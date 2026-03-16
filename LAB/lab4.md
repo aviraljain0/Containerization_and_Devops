@@ -21,17 +21,17 @@ cd my-flask-app
 
 **`app.py`**  
 
-![](../Screeshots/Lab4_s/lab4.a.png)
+![](../Screeshots/lab4_s/lab4.a.png)
 
 **`requirements.txt`**  
 
-![](../Screeshots/Lab4_s/lab4.b.png)
+![](../Screeshots/lab4_s/lab4.b.png)
 
 ### Step 2: Create Dockerfile
 
 **`Dockerfile`**  
 
-![](../Screeshots/Lab4_s/lab4.c.png)
+![](../Screeshots/lab4_s/lab4.c.png)
 
 ---
 
@@ -41,7 +41,7 @@ cd my-flask-app
 
 **`.dockerignore`**  
 
-![](../Screeshots/Lab4_s/lab4.d.png)
+![](../Screeshots/lab4_s/lab4.d.png)
 
 ### Step 2: Why .dockerignore is Important
 * Prevents unnecessary files from being copied
@@ -55,16 +55,16 @@ cd my-flask-app
 
 ### Step 1: Basic Build Command
 
-![](../Screeshots/Lab4_s/lab4.2.png)
-![](../Screeshots/Lab4_s/lab4.3.png)
+![](../Screeshots/lab4_s/lab4.2.png)
+![](../Screeshots/lab4_s/lab4.3.png)
 
 ### Step 2: Tagging Images
 
-![](../Screeshots/Lab4_s/lab4.4.png)
+![](../Screeshots/lab4_s/lab4.4.png)
 
 ### Step 3: View Image Details
 
-![](../Screeshots/Lab4_s/lab4.5.png)
+![](../Screeshots/lab4_s/lab4.5.png)
 
 ---
 
@@ -72,11 +72,11 @@ cd my-flask-app
 
 ### Step 1: Run Container
 
-![](../Screeshots/Lab4_s/lab4.7.png)
+![](../Screeshots/lab4_s/lab4.7.png)
 
 ### Step 2: Manage Containers
 
-![](../Screeshots/Lab4_s/lab4.8.png)
+![](../Screeshots/lab4_s/lab4.8.png)
 
 ---
 
@@ -91,11 +91,11 @@ cd my-flask-app
 
 **`Dockerfile.multistage`**  
 
-![](../Screeshots/Lab4_s/lab4.e.png)
+![](../Screeshots/lab4_s/lab4.e.png)
 
 ### Step 3: Build and Compare
 
-![](../Screeshots/Lab4_s/lab4.9.png)
+![](../Screeshots/lab4_s/lab4.9.png)
 
 ---
 
@@ -103,7 +103,7 @@ cd my-flask-app
 
 ### Step 1: Prepare for Publishing
 
-![](../Screeshots/Lab4_s/lab4.10.png)
+![](../Screeshots/lab4_s/lab4.10.png)
 
 ### Step 2: Pull and Run from Docker Hub
 
@@ -121,23 +121,23 @@ docker run -d -p 5000:5000 username/my-flask-app:latest
 
 ### Step 1: Node.js Application
 
-![](../Screeshots/Lab4_s/lab4.f.png)
+![](../Screeshots/lab4_s/lab4.f.png)
 
 **`app.js`**  
 
-![](../Screeshots/Lab4_s/lab4.g.png)
+![](../Screeshots/lab4_s/lab4.g.png)
 
 **`package.json`**  
 
-![](../Screeshots/Lab4_s/lab4.h.png)
+![](../Screeshots/lab4_s/lab4.h.png)
 
 ### Step 2: Node.js Dockerfile
 
-![](../Screeshots/Lab4_s/lab4.i.png)
+![](../Screeshots/lab4_s/lab4.i.png)
 
 ### Step 3: Build and Run
 
-![](../Screeshots/Lab4_s/lab4.13.png)
+![](../Screeshots/lab4_s/lab4.13.png)
 
 ---
 

@@ -15,10 +15,10 @@
 
 ## 🧪 LAB Experiments
 
-- [Experiment 1](LAB/lab1.html)
-- [Experiment 2](LAB/Lab2.html)
-- [Experiment 3](LAB/lab3.html)
-- [Experiment 4](LAB/lab4.html)
+- [Experiment 1](LAB/lab1.md)
+- [Experiment 2](LAB/Lab2.md)
+- [Experiment 3](LAB/lab3.md)
+- [Experiment 4](LAB/lab4.md)
 
 ---
 

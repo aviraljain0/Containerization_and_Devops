@@ -11,7 +11,7 @@ Deploy and manage a simple Apache-based web server and:
 
 ## 1. Deploying a Simple Pod
 * **Run Pod:** `kubectl run apache-pod --image=httpd`
-![](../Screeshots/Apache_server_s/aps1.png)
+![](Screeshots/Apache_server_s/aps1.png)
 * **Check Status:** `kubectl get pods`
 * **Inspect:** `kubectl describe pod apache-pod`
     * Focus on the image (`httpd`), port (`80`), and events.

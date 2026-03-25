@@ -39,7 +39,7 @@ Deploy and manage a simple Apache-based web server and:
 * **Scale Up:** `kubectl scale deployment apache --replicas=2`
     * This ensures multiple pods run the same application.
 ![](apache_folder/9.png)
-![](apache_folder/13.png)
+
 
 
 ---

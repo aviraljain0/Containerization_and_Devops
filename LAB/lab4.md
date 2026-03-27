@@ -56,15 +56,15 @@ cd my-flask-app
 ### Step 1: Basic Build Command
 
 ![](../Screeshots/lab4_s/lab4.2.png)
-![](../Screeshots/lab4_s/lab4.3.png)
+
 
 ### Step 2: Tagging Images
 
-![](../Screeshots/lab4_s/lab4.4.png)
+![](../Screeshots/lab4_s/lab4.3.png)
 
 ### Step 3: View Image Details
 
-![](../Screeshots/lab4_s/lab4.5.png)
+![](../Screeshots/lab4_s/lab4.4.png)
 
 ---
 
@@ -72,11 +72,11 @@ cd my-flask-app
 
 ### Step 1: Run Container
 
-![](../Screeshots/lab4_s/lab4.7.png)
+![](../Screeshots/lab4_s/lab4.5.png)
 
 ### Step 2: Manage Containers
 
-![](../Screeshots/lab4_s/lab4.8.png)
+![](../Screeshots/lab4_s/lab4.6.png)
 
 ---
 

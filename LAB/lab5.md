@@ -165,7 +165,7 @@ docker run -d \
   my-app
 ```
 
-![images for exp 5](../Screeshots/lab3_s/lab3.1.png)
+![images for exp 5](../Screeshots/lab5_s/lab5.8.png)
 
 ---
 
@@ -241,7 +241,7 @@ docker logs --tail 100 container-name
 docker inspect container-name
 docker events
 ```
-![images for exp 5](../Screeshots/lab3_s/lab3.1.png)
+![images for exp 5](../Screeshots/lab5_s/lab5.9.png)
 ---
 
 #  Part 4: Docker Networks
@@ -273,7 +273,7 @@ docker run -d --name host-app --network host nginx
 curl http://localhost
 ```
 
-![images for exp 5](../Screeshots/lab3_s/lab3.1.png)
+![images for exp 5](../Screeshots/lab5_s/lab5.10.png)
 ---
 
 #  Part 5: Complete Real-World Example
@@ -319,17 +319,17 @@ docker run -d \
   --env-file .env.production \
   flask-app:latest
 ```
-![images for exp 5](../Screeshots/lab3_s/lab3.1.png)
+![images for exp 5](../Screeshots/lab5_s/lab5.11.png)
 
-![images for exp 5](../Screeshots/lab3_s/lab3.1.png)
+![images for exp 5](../Screeshots/lab5_s/lab5.12.png)
 
-![images for exp 5](../Screeshots/lab3_s/lab3.1.png)
+![images for exp 5](../Screeshots/lab5_s/lab5.13.png)
 
-![images for exp 5](../Screeshots/lab3_s/lab3.1.png)
+![images for exp 5](../Screeshots/lab5_s/lab5.14.png)
 
-![images for exp 5](../Screeshots/lab3_s/lab3.1.png)
+![images for exp 5](../Screeshots/lab5_s/lab5.15.png)
 
-![images for exp 5](../Screeshots/lab3_s/lab3.1.png)
+![images for exp 5](../Screeshots/lab5_s/lab5.16.png)
 ---
 
 #  Key Takeaways

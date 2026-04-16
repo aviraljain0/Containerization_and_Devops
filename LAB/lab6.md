@@ -149,8 +149,8 @@ Stop and remove:
 docker stop lab-nginx
 docker rm lab-nginx
 ```
-![images for exp 6](./images/image1.jpeg)
-![images for exp 6](./images/image2.jpeg)
+![images for exp 6](../Screeshots/lab6_s/lab6.1.png)
+![images for exp 6](../Screeshots/lab6_s/lab6.2.png)
 ---
 
 ### Using Docker Compose
@@ -167,7 +167,7 @@ services:
     volumes:
       - ./html:/usr/share/nginx/html
 ```
-![images for exp 6](./images/image3.jpeg)
+![images for exp 6](../Screeshots/lab6_s/lab6.3.png)
 
 Run:
 
@@ -198,7 +198,7 @@ Create network:
 ```bash
 docker network create wp-net
 ```
-![images for exp 6](./images/image4.jpeg)
+![images for exp 6](../Screeshots/lab6_s/lab6.4.png)
 Run MySQL:
 
 ```bash
@@ -224,13 +224,13 @@ docker run -d \
   -e WORDPRESS_DB_NAME=wordpress \
   wordpress:latest
 ```
-![images for exp 6](./images/image5.jpeg)
+![images for exp 6](../Screeshots/lab6_s/lab6.5.png)
 
 Access:
 
 http://localhost:8082
 
-![images for exp 6](./images/image6.jpeg)
+![images for exp 6](../Screeshots/lab6_s/lab6.6.png)
 
 ---
 
@@ -261,7 +261,7 @@ services:
 volumes:
   mysql_data:
 ```
-![images for exp 6](./images/image7.jpeg)
+![images for exp 6](../Screeshots/lab6_s/lab6.7.png)
 
 Run:
 

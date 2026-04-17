@@ -274,7 +274,7 @@ Stop:
 ```bash
 docker compose down -v
 ```
-![images for exp 6](./images/image8.jpeg)
+![images for exp 6](../Screeshots/lab6_s/lab6.8.png)
 ---
 
 # PART C – CONVERSION & RESOURCE TASKS
@@ -294,7 +294,7 @@ docker run -d \
   --restart unless-stopped \
   node:18-alpine
 ```
-![images for exp 6](./images/image10.jpeg)
+![images for exp 6](../Screeshots/lab6_s/lab6.9.png)
 
 Compose equivalent:
 
@@ -312,7 +312,7 @@ services:
       DEBUG: "false"
     restart: unless-stopped
 ```
-![images for exp 6](./images/image9.jpeg)
+![images for exp 6](../Screeshots/lab6_s/lab6.10.png)
 ---
 
 ## Task 4: Resource Limits Conversion
@@ -347,7 +347,7 @@ services:
           memory: 256m
           cpus: '0.5'
 ```
-![images for exp 6](./images/image12.jpeg)
+![images for exp 6](../Screeshots/lab6_s/lab6.11.png)
 
 Note:  
 The `deploy` section works only in Docker Swarm mode.
@@ -369,7 +369,7 @@ http.createServer((req, res) => {
   res.end("Docker Compose Build Lab");
 }).listen(3000);
 ```
-![images for exp 6](./images/image14.jpeg)
+![images for exp 6](../Screeshots/lab6_s/lab6.12.png)
 
 ### Dockerfile
 
@@ -382,7 +382,7 @@ EXPOSE 3000
 
 CMD ["node", "app.js"]
 ```
-![images for exp 6](./images/image15.jpeg)
+![images for exp 6](../Screeshots/lab6_s/lab6.13.png)
 
 ### docker-compose.yml
 
@@ -398,7 +398,7 @@ services:
     ports:
       - "3000:3000"
 ```
-![images for exp 6](./images/image16.jpeg)
+![images for exp 6](../Screeshots/lab6_s/lab6.14.png)
 
 Run:
 
@@ -431,7 +431,7 @@ COPY --from=builder /app/app.js .
 EXPOSE 3000
 CMD ["node", "app.js"]
 ```
-![images for exp 6](./images/image18.jpeg)
+![images for exp 6](../Screeshots/lab6_s/lab6.15.png)
 
 Compose configuration:
 

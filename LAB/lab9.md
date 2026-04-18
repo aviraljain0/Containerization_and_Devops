@@ -39,11 +39,11 @@ sudo apt install ansible -y
 ansible --version
 ansible localhost -m ping
 ```
-![ ](Screenshots/Exp9/1.png)
+![ ](../Screeshots/lab9_s/9.1.png)
 
-![ ](Screenshots/Exp9/2.png)
+![ ](../Screeshots/lab9_s/9.2.png)
 
-![ ](Screenshots/Exp9/3.png)
+![ ](../Screeshots/lab9_s/9.3png)
 
 ### Step 2: Generate SSH Key
 ```bash
@@ -51,17 +51,17 @@ ssh-keygen -t rsa -b 4096
 cp ~/.ssh/id_rsa.pub .
 cp ~/.ssh/id_rsa .
 ```
-![ ](Screenshots/Exp9/4.png)
+![ ](../Screeshots/lab9_s/9.4.png)
 
 ### Step 3: Create Dockerfile
 
-![ ](Screenshots/Exp9/5.png)
+![ ](../Screeshots/lab9_s/9.5.png)
 
 ### Step 4: Build Docker Image
 ```bash
 docker build -t ubuntu-server .
 ```
-![ ](Screenshots/Exp9/6.png)
+![ ](../Screeshots/lab9_s/lab9.6.png)
 
 ### Step 5: Test SSH
 ```bash
@@ -69,14 +69,14 @@ docker run -d -p 2222:22 --name ssh-test-server ubuntu-server
 ssh root@localhost -p 2222
 ssh -i ~/.ssh/id_rsa root@localhost -p 2222
 ```
-![ ](Screenshots/Exp9/7.png)
+![ ](../Screeshots/lab9_s/9.7.png)
 
 ### Step 6: Remove Test Container
 ```bash
 docker stop ssh-test-server
 docker rm ssh-test-server
 ```
-![ ](Screenshots/Exp9/8.png)
+![ ](../Screeshots/lab9_s/9.8.png)
 
 ### Step 7: Run 4 Servers
 ```bash
@@ -84,16 +84,16 @@ for i in {1..4}; do
   docker run -d -p 220${i}:22 --name server${i} ubuntu-server
 done
 ```
-![ ](Screenshots/Exp9/9.png)
+![ ](../Screeshots/lab9_s/9.9.png)
 
 ### Step 8: Create Inventory
-![ ](Screenshots/Exp9/10.png)
+![ ](../Screeshots/lab9_s/9.10.png)
 
 ### Step 9: Test Connectivity\
 ```bash
 ansible all -i inventory.ini -m ping
 ```
-![ ](Screenshots/Exp9/11.png)
+![ ](../Screeshots/lab9_s/9.11.png)
 
 ### Step 10: Create Playbook
 - Create a file named update.yml:
@@ -119,25 +119,19 @@ ansible all -i inventory.ini -m ping
         dest: /root/ansible_test.txt
         content: "Configured by Ansible on {{ inventory_hostname }}"
 ```
-![ ](Screenshots/Exp9/12.png)
+![ ](../Screeshots/lab9_s/9.12.png)
 
 ### Step 11: Run Playbook
 ```bash
 ansible-playbook -i inventory.ini update.yml
 ```
-![ ](Screenshots/Exp9/13.png)
+![ ](../Screeshots/lab9_s/9.13.png)
 
-### Step 12: Verify Output
-```bash
-ansible all -i inventory.ini -m command -a "cat /root/ansible_test.txt"
-```
-![ ](Screenshots/Exp9/14.png)
-
-### Step 13: Cleanup
+### Step 12: Cleanup
 ```bash
 for i in {1..4}; do docker rm -f server${i}; done
 ```
-![ ](Screenshots/Exp9/15.png)
+![ ](../Screeshots/lab9_s/9.14.png)
 
 ## Conclusion
 ### Ansible simplifies server management by automating tasks and ensuring consistency across multiple systems.

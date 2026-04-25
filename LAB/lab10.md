@@ -230,7 +230,7 @@ nano pom.xml
 
 </project>
 ```
-![Create pom.xml file](../Screeshots/lab10_s/lab10.6.png)
+![Create pom.xml file](../Screeshots/lab10_s/10.6.png)
 
 
 **Step-9:- Generate Token**

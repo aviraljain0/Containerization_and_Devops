@@ -86,14 +86,14 @@ networks:
 ```bash
 docker-compose up -d
 ```
-![Start Compose](./Images/2.png)
+![Start Compose](../Screeshots/lab10_s/10.1.png)
 
 
 **Step-3:- Verify SonarQube is running via Logs**
 ```bash
 docker-compose logs -f sonarqube
 ```
-![Verify SonarQube](./Images/3.png)
+![Verify SonarQube](../Screeshots/lab10_s/10.2.png)
 
 
 **Step-4:- Login to SonarQube**
@@ -103,12 +103,12 @@ http://localhost:9000
 - username: `admin`
 - password: `admin`
 
-![Login](./Images/4.png)
+![Login](../Screeshots/lab10_s/10.3.png)
 
 
 **Step-5:- HomePage**
 
-![HomePage](./Images/5.png)
+![HomePage](../Screeshots/lab10_s/10.4.png)
 
 
 **Step-6:- Create Sample Java App**
@@ -116,7 +116,7 @@ http://localhost:9000
 mkdir -p sample-java-app/src/main/java/com/example
 cd sample-java-app
 ```
-![Create Sample Java App](./Images/6.png)
+![Create Sample Java App](../Screeshots/lab10_s/10.5.png)
 
 
 **Step-7:- Create `Calculator.java`**
@@ -230,7 +230,7 @@ nano pom.xml
 
 </project>
 ```
-![Create pom.xml file](./Images/8.png)
+![Create pom.xml file](../Screeshots/lab10_s/lab10.6.png)
 
 
 **Step-9:- Generate Token**
@@ -242,7 +242,7 @@ Navigate to: **Profile → My Account → Security**
 
 > **Important:** Store the token somewhere safe. You cannot retrieve it again after closing the page.
 
-![Create Token squ_3ff1e919d247a9f0c7e045e100670da001860bd0](./Images/9.png)
+![Create Token squ_3ff1e919d247a9f0c7e045e100670da001860bd0](../Screeshots/lab10_s/10.7.png)
 
 
 **Step-10:- Run Scanner**
@@ -251,12 +251,12 @@ Navigate to: **Profile → My Account → Security**
 ```bash
 mvn sonar:sonar -Dsonar.login=TOKEN
 ```
-![Run Scanner](./Images/10.png)
+![Run Scanner](../Screeshots/lab10_s/10.8.png)
 
 
 **Step-11:- Scroll down to verify Build Success**
 
-![Success Verify](./Images/11.png)
+![Success Verify](../Screeshots/lab10_s/10.9.png)
 
 
 **Step-12:- View Analysis Results on Browser**
@@ -265,11 +265,11 @@ Open the dashboard:
 ```
 http://localhost:9000/dashboard?id=sample-java-app
 ```
-![List Test](./Images/12.png)
+![List Test](../Screeshots/lab10_s/10.10.png)
 
 
 **Step-13:- View Detailed Report**
 
 Click on any issue number to see the exact line and reason for each issue.
 
-![View Report](./Images/13.png)
+![View Report](../Screeshots/lab10_s/10.11.png)

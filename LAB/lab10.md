@@ -116,7 +116,6 @@ http://localhost:9000
 mkdir -p sample-java-app/src/main/java/com/example
 cd sample-java-app
 ```
-![Create Sample Java App](../Screeshots/lab10_s/10.5.png)
 
 
 **Step-7:- Create `Calculator.java`**
@@ -230,7 +229,7 @@ nano pom.xml
 
 </project>
 ```
-![Create pom.xml file](../Screeshots/lab10_s/10.6.png)
+![Create pom.xml file](../Screeshots/lab10_s/10.5.png)
 
 
 **Step-9:- Generate Token**
@@ -242,7 +241,7 @@ Navigate to: **Profile → My Account → Security**
 
 > **Important:** Store the token somewhere safe. You cannot retrieve it again after closing the page.
 
-![Create Token squ_3ff1e919d247a9f0c7e045e100670da001860bd0](../Screeshots/lab10_s/10.7.png)
+![Create Token squ_3ff1e919d247a9f0c7e045e100670da001860bd0](../Screeshots/lab10_s/10.6.png)
 
 
 **Step-10:- Run Scanner**
@@ -251,12 +250,12 @@ Navigate to: **Profile → My Account → Security**
 ```bash
 mvn sonar:sonar -Dsonar.login=TOKEN
 ```
-![Run Scanner](../Screeshots/lab10_s/10.8.png)
+![Run Scanner](../Screeshots/lab10_s/10.7.png)
 
 
 **Step-11:- Scroll down to verify Build Success**
 
-![Success Verify](../Screeshots/lab10_s/10.9.png)
+![Success Verify](../Screeshots/lab10_s/10.8.png)
 
 
 **Step-12:- View Analysis Results on Browser**
@@ -265,11 +264,11 @@ Open the dashboard:
 ```
 http://localhost:9000/dashboard?id=sample-java-app
 ```
-![List Test](../Screeshots/lab10_s/10.10.png)
+![List Test](../Screeshots/lab10_s/10.9.png)
 
 
 **Step-13:- View Detailed Report**
 
 Click on any issue number to see the exact line and reason for each issue.
 
-![View Report](../Screeshots/lab10_s/10.11.png)
+![View Report](../Screeshots/lab10_s/10.10.png)

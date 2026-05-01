@@ -180,7 +180,7 @@ kubectl get svc
 | wordpress-service | NodePort | 10.106.38.175 | \<none\> | 80:30007/TCP | 31s |
 
 > **Screenshot:**
-> ![kubectl get svc output](../Screeshots/lab12_s/12.6.png)
+> ![kubectl get svc output](../Screeshots/lab12_s/12.7.png)
 
 The `wordpress-service` is exposed on **port 30007** externally via NodePort.
 
@@ -200,7 +200,7 @@ deployment.apps/wordpress scaled
 ```
 
 > **Screenshot:**
-> ![kubectl scale deployment output](../Screeshots/lab12_s/12.7.png)
+> ![kubectl scale deployment output](../Screeshots/lab12_s/12.8.png)
 
 ---
 
@@ -222,7 +222,7 @@ kubectl get pods
 | wordpress-6698dd7d66-tqvf2 | 1/1 | Running | 0 | 15s |
 
 > **Screenshot:**
-> ![kubectl get pods showing 4 running pods](../Screeshots/lab12_s/12.8.png)
+> ![kubectl get pods showing 4 running pods](../Screeshots/lab12_s/12.9.png)
 
 Two new pods (`n95mf` and `tqvf2`) were created automatically by the Deployment controller.
 
@@ -242,7 +242,7 @@ pod "wordpress-6698dd7d66-cs5hx" deleted from default namespace
 ```
 
 > **Screenshot:**
-> ![kubectl delete pod output](../Screeshots/lab12_s/12.9.png)
+> ![kubectl delete pod output](../Screeshots/lab12_s/12.10.png)
 
 ---
 
@@ -264,7 +264,7 @@ kubectl get pods
 | wordpress-6698dd7d66-zmch7 | 1/1 | Running | 0 | 20s |
 
 > **Screenshot:**
-> ![kubectl get pods showing 4 running pods after self-healing](../Screeshots/lab12_s/12.10.png)
+> ![kubectl get pods showing 4 running pods after self-healing](../Screeshots/lab12_s/12.11.png)
 
 The deleted pod `cs5hx` was replaced by a new pod `zmch7` (age: 20s). The total pod count remains **4**, confirming Kubernetes' self-healing behavior.
 

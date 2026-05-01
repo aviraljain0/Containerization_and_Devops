@@ -76,7 +76,7 @@ docker node ls
 
 The following stack file defines the WordPress and MySQL services used in this experiment:
 
-![docker-compose.yml file](../Screenshots/Lab11_s/lab11.1.png)
+![docker-compose.yml file](../Screeshots/lab11_s/11.1.png)
 
 ---
 
@@ -89,7 +89,7 @@ docker compose down
 docker ps
 ```
 
-![docker compose down and docker ps output](../Screenshots/Lab11_s/lab11.2.png)
+![docker compose down and docker ps output](../Screeshots/lab11_s/11.2.png)
 
 ---
 
@@ -101,7 +101,7 @@ Initialize the current machine as a Swarm manager node using `docker swarm init`
 docker swarm init
 ```
 
-![docker swarm init output](../Screenshots/Lab11_s/lab11.3.png)
+![docker swarm init output](../Screeshots/lab11_s/11.3.png)
 
 ---
 
@@ -113,7 +113,7 @@ List all nodes in the Swarm to confirm the manager node is active.
 docker node ls
 ```
 
-![docker node ls output](../Screenshots/Lab11_s/lab11.4.png)
+![docker node ls output](../Screeshots/lab11_s/11.4.png)
 
 ---
 
@@ -125,7 +125,7 @@ Deploy the WordPress stack using the `docker-compose.yml` file with the stack na
 docker stack deploy -c docker-compose.yml wpstack
 ```
 
-![docker stack deploy output](../Screenshots/Lab11_s/lab11.5.png)
+![docker stack deploy output](../Screeshots/lab11_s/11.5.png)
 
 ---
 
@@ -137,7 +137,7 @@ Verify that all services in the stack are running correctly.
 docker service ls
 ```
 
-![docker service ls output](../Screenshots/Lab11_s/lab11.6.png)
+![docker service ls output](../Screeshots/lab11_s/11.6.png)
 
 ---
 
@@ -149,7 +149,7 @@ View the tasks (containers) running for the `wpstack_wordpress` service.
 docker service ps wpstack_wordpress
 ```
 
-![docker service ps wpstack_wordpress output](../Screenshots/Lab11_s/lab11.7.png)
+![docker service ps wpstack_wordpress output](../Screeshots/lab11_s/11.7.png)
 
 ---
 
@@ -161,7 +161,7 @@ List all running containers to confirm the WordPress and MySQL containers are ac
 docker ps
 ```
 
-![docker ps output](../Screenshots/Lab11_s/lab11.8.png)
+![docker ps output](../Screeshots/lab11_s/11.8.png)
 
 ---
 
@@ -173,7 +173,7 @@ Scale the WordPress service to 3 replicas to demonstrate horizontal scaling.
 docker service scale wpstack_wordpress=3
 ```
 
-![docker service scale output](../Screenshots/Lab11_s/lab11.9.png)
+![docker service scale output](../Screeshots/lab11_s/11.9.png)
 
 ---
 
@@ -187,7 +187,7 @@ Use `grep` to filter and display only the running WordPress containers.
 docker ps | grep wordpress
 ```
 
-![docker ps grep wordpress output](../Screenshots/Lab11_s/lab11.11.png)
+![docker ps grep wordpress output](../Screeshots/lab11_s/11.10.png)
 
 ---
 
@@ -199,7 +199,7 @@ Clean up by removing the entire `wpstack` stack.
 docker stack rm wpstack
 ```
 
-![docker stack rm wpstack output](../Screenshots/Lab11_s/lab11.10.png)
+![docker stack rm wpstack output](../Screeshots/lab11_s/11.11.png)
 
 ---
 

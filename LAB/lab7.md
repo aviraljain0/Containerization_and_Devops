@@ -163,12 +163,12 @@ volumes:
 
 ### Screenshot 1 — Jenkins Container Started Successfully
 
-![Jenkins Docker Compose Up](../Screenshots/Lab7_s/lab7.1.png)
+![Jenkins Docker Compose Up](../Screeshots/lab7_s/7.1.png)
 > `docker compose up -d` was run in WSL inside the `jenkins-setup` folder. All 14 layers pulled successfully. Container `jenkins` was created and started on port 8080.
 
 ### Screenshot 2 — Jenkins Unlock Screen
 
-![Jenkins Unlock Screen](../Screenshots/Lab7_s/lab7.2.png)
+![Jenkins Unlock Screen](../Screeshots/lab7_s/7.2.png)
 
 > Accessed Jenkins at `http://localhost:8080`. The initial admin password was retrieved using:
 > ```bash
@@ -177,19 +177,19 @@ volumes:
 
 ### Screenshot 3 — Plugin Installation
 
-![Jenkins Plugin Installation](../Screenshots/Lab7_s/lab7.3.png)
+![Jenkins Plugin Installation](../Screeshots/lab7/7.3.png)
 
 > Clicked "Install suggested plugins". Jenkins installed all required plugins including Pipeline, Git, GitHub Branch Source, Credentials Binding, and others.
 
 ### Screenshot 4 — Docker CLI Installed Inside Jenkins
 
-![Docker Installed in Jenkins](../Screenshots/Lab7_s/lab7.4.png)
+![Docker Installed in Jenkins](../Screeshots/lab7_s/7.4.png)
 
 > Entered Jenkins container using `docker exec -it jenkins bash` and ran `apt-get update && apt-get install -y docker.io` to install Docker CLI inside Jenkins so it can run `docker build` and `docker push` commands.
 
 ### Screenshot 5 — Docker ps Inside Jenkins Container
 
-![Docker ps Inside Jenkins](../Screenshots/Lab7_s/lab7.5.png)
+![Docker ps Inside Jenkins](../Screeshots/lab7_s/7.5.png)
 
 > Verified that Docker socket mount is working correctly. Running `docker ps` inside the Jenkins container shows the host's running containers — confirming Jenkins can control the host Docker daemon directly.
 
@@ -199,13 +199,13 @@ volumes:
 
 ### Screenshot 6 — Docker Hub Credentials Added
 
-![Credentials Added](../Screenshots/Lab7_s/lab7.6.png)
+![Credentials Added](../Screeshots/lab7_s/7.6.png)
 
 > Added Docker Hub Access Token as a Secret Text credential in Jenkins with ID `dockerhub-token`. Path followed: Manage Jenkins → Credentials → System → Global credentials → Add Credentials.
 
 ### Screenshot 7 — Pipeline Job Configured
 
-![Pipeline Job Configure](../Screenshots/Lab7_s/lab7.7.png)
+![Pipeline Job Configure](../Screeshots/lab7_s/7.7.png)
 
 > Created a new Pipeline job named `Pipeline`. Configured it with:
 > - Definition: Pipeline script from SCM
@@ -216,7 +216,7 @@ volumes:
 
 ### Screenshot 8 — Pipeline Build Console Output
 
-![Console Output](../Screenshots/Lab7_s/lab7.8.png)
+![Console Output](../Screeshots/lab7_s/7.9.png)
 > Pipeline successfully cloned the repository from GitHub. The console shows Jenkins reading the Jenkinsfile from `https://github.com/JasmanCodes/My-App` and executing each stage in sequence.
 
 ---
